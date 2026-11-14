@@ -8,9 +8,9 @@ resource "aws_instance" "web" {
       command = "echo ${self.private_ip} > inventory.ini"
     }
 
-    provisioner "local-exec" {
-      command = "echo ${self.public_ip} > inventory.ini"
-    }
+    # provisioner "local-exec" {
+    #   command = "echo ${self.public_ip} > inventory.ini"
+    # }
 
     provisioner "local-exec" {
       command = "echo instance created"
